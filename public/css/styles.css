@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --main-color: #255d50;
+}
+
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  background-color: #efe8dc;
+}
+
+/* Uses line 20, otherwise selector wouldnt work */
+input.form-control:focus ~ label {
+  color: var(--main-color) !important;
+}
+
+.bg-main {
+  background-color: var(--main-color);
+}
+
+a:hover {
+  color: var(--main-color) !important;
+}
+
+.bg-image {
+  background-image: url("https://cdn.dribbble.com/users/31348/screenshots/4304953/attachments/981627/van_morrison_la.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* Makes the label go above the input so it can be styled*/
+.form-group {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Changes the inputs to be underlined */
+input:not([type="submit"]) {
+  outline: 0 !important;
+  border-width: 0 0 1.5px !important;
+  border-color: lightgrey !important;
+  color: black;
+}
+
+.text-black,
+.text-black:hover {
+  color: black;
+}
+
+/* Changes the hover color of the sign in/up button*/
+button.btn-dark:hover {
+  background-color: var(--main-color) !important;
+}
+
+/* Removes the blue outline from buttons*/
+button {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Makes Carsoul indicators round */
+.carousel-indicators.round li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+/* MAKES CAROUSEL SLIDE UP AND DOWN */
+
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100% 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left {
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+/* Good alternative images
+1. background-image: url("https://cdn.dribbble.com/users/1731254/screenshots/12332372/media/5e2652000291ef08dc21d4cb90382828.png"); 
+2. background-image: url("https://cdn.dribbble.com/users/175710/screenshots/2051146/dribbble_exspenses_cat-01.png");
+3. background-image: url("https://i.imgur.com/f4H7inh.jpg"); */

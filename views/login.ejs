@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>User Registration</title>
+</head>
+<body>
+  <% if(success && success.length) {%>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <%= success %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <% } %>
+    
+    <% if(error && error.length) {%>
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <%= error %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <% } %>
+
+
+    <div class="container-fluid h-100">
+        <div class="row h-100 p-5 align-self-center">
+          <!--<Login & Signup Section>-->
+          <div class="col bg-white">
+      
+            <!-- <Carousel> -->
+            <div id="carousel" class="carousel h-100 bg-white slide vert" data-interval="false" data-riding="carousel" data-wrap="false">
+              <div class="carousel-inner h-100">
+      
+                <!-- <Login> -->
+                <div class="carousel-item active h-100">
+                  <div class="row h-100 align-items-center">
+      
+                    <div class="col-2"></div>
+                    <div class="col">
+                      <h1 class="font-weight-bolder display-4">Login</h1>
+                      <div class="mb-5 text-muted">Dont have an account? <span><u> <a href="/signup" class="text-black" role="button" data-slide="next">
+                              Sign Up
+                            </a></u></span></div>
+      
+                      <form action="/login" method="post">
+                        <div class="form-group mt-2">
+                          <input type="email" class="form-control rounded-0" id="email" name="email">
+                          <label for="SI-EmailInput" class="text-muted">Your email</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control rounded-0" id="password" name="password">
+                          <label for="SI-PasswordInput" class=" text-muted">Password</label>
+                        </div>
+      
+                        <button type="submit" class="btn mt-5 rounded-0 border-0 w-100 btn-dark font-weight-bold p-3">Sign In</button>
+                      </form>
+                    </div>
+                    <div class="col-2"></div>
+      
+                  </div>
+                </div>
+                <!-- </Login> -->
+      
+                <!-- <Signup> -->
+                <div class="carousel-item bg-white h-100">
+                  <div class="row h-100 align-items-center">
+                    <div class="col-2"></div>
+                    <div class="col">
+      
+                      <h1 class="font-weight-bolder display-4">Get Started</h1>
+                      <div class="text-muted mb-5">Already have an account? <span><u> <a href="#carousel" class="text-black" role="button" data-slide="prev">
+                              Sign In
+                            </a></u></span></div>
+      
+                      <form>
+                        <div class="form-group mt-2">
+                          <input type="text" class="form-control rounded-0 " id="SU-InputName">
+                          <label for="SU-InputName" class=" text-muted">Your name</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" class="form-control rounded-0 " id="SU-InputEmail">
+                          <label for="SU-InputEmail" class=" text-muted">Your email</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control rounded-0" id="SU-InputPhone">
+                          <label for="SU-InputPhone" class=" text-muted">Phone number</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control rounded-0" id="SU-InputPassword">
+                          <label for="SU-InputPassword" class=" text-muted">Password</label>
+                        </div>
+      
+                        <button type="submit" class="btn rounded-0 border-0 w-100 btn-dark font-weight-bold p-3 mt-5">Sign Up</button>
+                      </form>
+                    </div>
+                    <div class="col-2"></div>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+      
+          </div>
+      
+          <div class="col bg-image  d-none d-md-block p-0"
+          </div>
+        </div>
+      
+      </div> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
